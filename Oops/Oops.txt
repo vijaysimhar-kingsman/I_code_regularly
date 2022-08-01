@@ -1,0 +1,119 @@
+CONSTRUCTORS
+
+-There is no need to use desctructors(opp to constructors), java automatically
+	does the job 
+Q: how to write destructors ?
+ans: There are no destructors in java , coz java contains garbage collectors.
+ 
+ACCESS MODIFIERS:
+
+why is main method written as public ?
+
+compiler while executed it searches from where should i execute
+as it will be from main , it has to be accessed by the compiler so that it
+get executed.and it should not be private / protected .
+
+package xyz;
+class A{
+	public String name;
+	Protected String email;
+	Private String password;
+	
+	public String getPassword(){
+		return this.password;
+	}
+	public void setPassword(String password){
+		this.password=password;
+	}
+
+}
+
+class B{
+	A.name ="vijay"; #works
+	A.email ="vijaysimhareddy@gmail.com"; #works	
+	
+	A.password ="laksdjf"; #ERROR won't be accessed 
+	
+}
+
+Note : here A is a class having some properties ,and B is sub class.
+
+PUBLIC : 
+
+public properties are accessed every where , in subclasses and in other classes
+by importing package
+
+PROTECTED :
+protected can be accessed in the same file ,i.e  can be accessed in subclasses.
+
+PRIVATE: 
+private is only accessed in that class only.
+
+Inorde to access the private properties we use GETTERS and SETTERS.
+
+ENCAPSULATION :
+
+in simple terms ,combining  Data - properties of class and its methods to 
+keep them in single unit (class) is called encapsulation
+
+DATA HIDING is possible using ENCAPSULATION. using ACCESS MOIDFIERS .
+data hiding :is the process of protecting members of class form unintended
+changes whereas, abstraction is hindin the implementation details and showing
+only important/useful parts to the user. 
+
+
+ABSTRACTION :
+showing important things to user and hiding un important things from users. 
+
+ABSTRACT :-   
+
+lets say there is class which is just to be there no use of having it.
+it just provides , this might have this kind of view , in this class there
+may be this method which can be further developed in sub clasess by 
+extending them.
+
+we cannot create objects for abstract classes. It just a blue print.
+ 
+abstract classes can have abstract and non abstract methods and properties
+CONSTRUCTOR CHAINING :
+ when you create a object of derived class , base class constructor
+ called first then derived class constructor will get called.
+
+
+INTERFACES :
+
+-ALL THE FIELDS INTERFACES ARE PUBLIC STATIC AND FINAL BY DEFAULT
+
+-ALL METHODS ARE PUBLIC AND ABSTRACT BY DEFAULT
+
+-A CALSS THAT IMPLEMENTS AN INTERFACE MUST IMPLEMENT ALL THE METHODS DECLARED IN THE INTERFACE
+
+-INTERFACE SUPPORTS THE FUNCTIONALITY OF MULTIPLE INHERITANCE
+
+ 
+PURE ABSTRATION CAN BE OBTAINED  WITH THE HELP OF INTERFACES.
+
+abstraction using  interfaces can show unwanted things to users but that 
+will be hided  through interfaces.
+
+there cannot be constructors in java
+only ABSTRACT functions should present in INTERFACES
+
+
+STATIC :
+
+it is used to define properties which are common in class;
+like school name for student class
+
+we can use those properties directly using class name
+like  Student.school;
+if change this value any where it updates for every object in the class
+
+static properties get memory allocated only once , thus it can save memory
+
+
+
+
+
+
+
