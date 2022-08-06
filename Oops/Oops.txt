@@ -4,6 +4,22 @@ CONSTRUCTORS
 	does the job 
 Q: how to write destructors ?
 ans: There are no destructors in java , coz java contains garbage collectors.
+
+INHERITANCE  
+
+getting methods and properties of one to another 
+class is called inheritance
+-Re usability Increases
+-Parent class - base class / super class
+-child class -sub class 
+
+ TYPES OF INHERITANCE
+ 
+ SINGLE A->B
+ MULTILEVEL A->B->C
+ HIERARCHICAL A->B A->C
+ HYBRID A->B->C A->D This will be done with interfaces
+ 
  
 ACCESS MODIFIERS:
 
