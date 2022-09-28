@@ -6,16 +6,12 @@ public class PickNotPick {
 			if(count == 3) {
 				if(ds.get(0)+ds.get(1)+ds.get(2)==sum){
 					al.add(new ArrayList<>(ds));
-				}
-				
-				//System.out.println(ds);
-				
+				}				
 			}return;
 		}
 		ds.add(arr[ind]);
 		pick(ind , arr, count+1,al,ds,sum);
 		ds.remove(ds.size()-1);
-		//System.out.println("inside");
 		pick(ind+1 , arr, count,al,ds,sum);
 	}
 	public static void main(String[] args) {
@@ -27,27 +23,26 @@ public class PickNotPick {
 			arr[i]=i;
 		}
 		List<List<Integer>> al= new ArrayList<>();
-		//ArrayList<Integer> ds= new ArrayList<>();
 		int sum =xorr[0];
+		//this function gives list of list which is having theri sum = sum and 
+		// of length 3
 		pick(0,arr,0,al,new ArrayList<>(),sum);
 		System.out.println(al);
 		int i=0,j=1;
 		int flag=0;
-		//int gotIt=-1;
+		
 		while(j<xorr.length && i<al.size()){
 			int x =al.get(i).get(0)^j;
 			int y=al.get(i).get(1)^j;
 			int z =al.get(i).get(2)^j;
 			if((x + y + z) == xorr[j]) {
 					j++;
-					flag++;	
-					//System.out.println("arr = " + al.get(i) + " value = "+ xorr[j]);
+					
 			}else{
 				j=1;
 				i++;
 				flag=0;
 			}
-			//System.out.println("getting in "+  al.get(i));
 		}System.out.println(al.get(i));
 		
 		
