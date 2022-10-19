@@ -1,0 +1,46 @@
+class pair{
+	int hd;
+	TreeNode node;
+	pair(TreeNode _node , int _hd){
+		node = _node;
+		hd=_hd;
+	}
+}
+class TreeNode {
+	int data;
+	TreeNode left;
+	TreeNode right;
+	TreeNode(int val){
+		this.val= val;
+		right=null;left=null;
+	}
+}
+//logic  - level order traversal and taking first valus of based on hd (x-axis)
+class solution {
+
+	public static ArrayList<Integer> topView(TreeNode root){
+
+		ArrayList<Integer> ans = new ArrayList<>();
+		if(root==null)return ans; 
+		HashMap<Integer,Integer> map = new TreeMap<>();
+		Queue<pair> q = new LinkedList<>();
+		q.push(new pair(root , 0));
+		while(!q.isEmpty()){
+			pair it = q.peek();
+			int hd = it.hd;
+			TreeNode node = it.node;
+			if(map.get(hd)==null)map.put(hd,node.data);
+			if(node.left!=null)q.add(new pair(node.left,hd-1));
+			
+			if(node.right!=null)q.add(new pair(node.right,hd+1));
+			
+			
+		}for(Integer x : map.keySet()){
+			ans.add(map.get(x));
+		}
+		return ans;
+	}
+
+
+
+}

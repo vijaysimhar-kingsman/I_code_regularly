@@ -72,17 +72,17 @@ public class subsequences {
 	
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int arr []= new int[]{2,1,3,1,4}; 
+		int arr []= new int[]{2,1,3,1,4};
 		ArrayList<Integer> list = new ArrayList<>();
 		// int n =3;
 		//f(0,arr,list,2,0);
-		printSubsequences(0,arr,list);
-		//int k=4;
+		//printSubsequences(0,arr,list);
+		int k=4;
 		//kSum(0,arr,list,k,0);
 		//oneKsum(0,arr,list,k,0);
 		//Integer count=0;
-		//int res =kSumCount(0,arr,k,0);
-		//System.out.println(res);
+		int res =kSumCount(0,arr,k,0);
+		System.out.println(res);
 		
 	}
 	
